@@ -33,6 +33,11 @@ public class PublicController {
     @Autowired
     public EmailService emailService;
 
+    @GetMapping("/check")
+    public String fn(){
+        return "hello";
+    }
+
     @PostMapping("/create-user")
     public void create(@RequestBody User user){
         service.create(user);
